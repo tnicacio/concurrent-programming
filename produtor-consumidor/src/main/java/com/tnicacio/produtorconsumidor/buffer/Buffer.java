@@ -11,8 +11,8 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Buffer {
 
     private final Pilha stack;
-    private Lock stackChangingLocker;
-    private Condition fullStack;
+    private final Lock stackChangingLocker;
+    private final Condition fullStack;
 
     public Buffer(int maxLimit) {
         stack = new PilhaVetor(maxLimit);
